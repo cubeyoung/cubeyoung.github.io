@@ -153,7 +153,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Paper video. -->
+    <!-- main Figure. -->
     <div class="column">
         <h2 class="title is-3"></h2>
         <div class="columns is-centered">
@@ -164,7 +164,7 @@
           </div>
         </div>
     </div>
-    <!--/ Paper video. -->    
+    <!--/ main Figure. -->    
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -194,70 +194,75 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
           <img src="./fig/figure1.jpg"
-            class="abstarct_image"
-            alt="figure1_image."/>
+          class="abstarct_image"
+          alt="figure1_image."/>
+          <p>
+            Harmonic mean IoU of various zero-shot semantic segmentation methods over the number of learnable parameters on
+            PASCAL VOC dataset. Black dashed line indicates the fully supervised learning result of ours.
+          </p>
         </div>
       </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2>
         <div class="columns is-centered">
           <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
             <img src="./fig/OT.jpg"
                  class="abstarct_image"
                  alt="figure1_image."/>
+            <p>
+                A schematic diagram of Multi Prompt Optimal Transport (MPOT) solvers including Shallow and Deep variants.
+            </p>
           </div>
 
         </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative Results</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./fig/scoremap.jpg"
-                 class="abstarct_image"
-                 alt="figure1_image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./fig/seg_appen.jpg"
-                 class="abstarct_image"
-                 alt="figure1_image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
       </div>
     </div>
   </div>
 </section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+  
+        <!-- Visual Effects. -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Visual Effects</h2>
+            <img src="./fig/scoremap.jpg"
+            class="abstarct_image"
+            alt="figure1_image."/>
+            <p>
+              Harmonic mean IoU of various zero-shot semantic segmentation methods over the number of learnable parameters on
+              PASCAL VOC dataset. Black dashed line indicates the fully supervised learning result of ours.
+            </p>
+          </div>
+        </div>
+        <!--/ Visual Effects. -->
+  
+        <!-- Matting. -->
+        <div class="column">
+          <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <img src="./fig/seg_appen.jpg"
+                   class="abstarct_image"
+                   alt="figure1_image."/>
+              <p>
+                  A schematic diagram of Multi Prompt Optimal Transport (MPOT) solvers including Shallow and Deep variants.
+              </p>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
 
 
 <section class="section" id="BibTeX">
