@@ -211,50 +211,60 @@
   </div>
 </section>
 
+
 <section class="section">
     <div class="container is-max-desktop">
-  
-      <div class="columns is-centered">
-  
-        <!-- Visual Effects. -->
-        <div class="column">
-          <div class="content">
-            <h2 class="title is-3"></h2>
-            <p>
-                Visualization of the learned text prompt and image pixel alignment. For each method, we present its segmentation result (left)
-                and N multiple text prompts-related score matrix activated by the predicted class (right). In the baseline method without OT, all the
-                Pi-related score matrices resemble each others. On the other hand, our ZegOT-Shallow and ZegOT-Deep show separate score matrices,
-                with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.
-            </p>            
-            <img src="./fig/scoremap.jpg"
-            class="abstarct_image"
-            alt="figure1_image."/>
+      <!-- main Figure. -->
+      <div class="column">
+          <h2 class="title is-3"></h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <img src="./fig/main.jpg"
+                   class="abstarct_image"
+                   alt="figure1_image."/>
+            </div>
           </div>
-        </div>
-        <!--/ Visual Effects. -->
-  
-        <!-- Matting. -->
+      </div>
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Visual Effects. -->
         <div class="column">
           <h2 class="title is-3"></h2>
           <div class="columns is-centered">
             <div class="column content">
-              <img src="./fig/seg_appen.jpg"
-                   class="abstarct_image"
-                   alt="figure1_image."/>
-              <p>
-                Qualitative zero-shot segmentation results on COCO-Stuff164K dataset. The yellow tag indicates seen classes, while the
-                green tag indicates unseen classes. Surprisingly, our ZegOT-Shallow and ZegOT-Deep effectively segment a tiny cat that does not even
-                belong to the ground truth (see red arrows in 2nd row), and properly segment the person class within the small-sized portraits (see red
-                arrows in 3rd row), while the previous SOTA method shows inferior performance on these features.
-              </p>
+                <p>
+                Visualization of the learned text prompt and image pixel alignment. For each method, we present its segmentation result (left)
+                and N multiple text prompts-related score matrix activated by the predicted class (right). In the baseline method without OT, all the
+                Pi-related score matrices resemble each others. On the other hand, our ZegOT-Shallow and ZegOT-Deep show separate score matrices,
+                with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.
+                </p>            
+                <img src="./fig/scoremap.jpg"
+                class="abstarct_image"
+                alt="figure1_image."/>
             </div>
-  
           </div>
-        </div>
-      </div>
-    </div>
-</section>
+        </div>  
+        <!--/ Visual Effects. -->
 
+
+        <div class="column">
+            <h2 class="title is-3"></h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                  <p>
+                    Qualitative zero-shot segmentation results on COCO-Stuff164K dataset. The yellow tag indicates seen classes, while the
+                    green tag indicates unseen classes. Surprisingly, our ZegOT-Shallow and ZegOT-Deep effectively segment a tiny cat that does not even
+                    belong to the ground truth (see red arrows in 2nd row), and properly segment the person class within the small-sized portraits (see red
+                    arrows in 3rd row), while the previous SOTA method shows inferior performance on these features.
+                  </p>            
+                  <img src="./fig/seg_appen.jpg"
+                  class="abstarct_image"
+                  alt="figure1_image."/>
+              </div>
+            </div>
+        </div> 
+    </div>       
+</section>
 
 
 <section class="section" id="BibTeX">
