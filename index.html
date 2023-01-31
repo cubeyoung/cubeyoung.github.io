@@ -63,17 +63,11 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://arxiv.org/pdf/2106.07009.pdf">
+            Noise2Score
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://arxiv.org/pdf/2209.14566.pdf">
+            DARL
           </a>
         </div>
       </div>
@@ -91,11 +85,11 @@
           <h1 class="title is-1 publication-title">ZegOT: Zero-shot Segmentation Through Optimal Transport of Text Prompts</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Kwanyoung Kim</a><sup>1</sup>,</span>
+              <a href="https://sites.google.com/view/kwanyoung-kim/?pli=1">Kwanyoung Kim</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Yujin Oh</a><sup>1</sup>,</span>
+              <a href="https://bispl.weebly.com/members.html">Yujin Oh</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jong Chul Ye</a><sup>1</sup>,
+              <a href="https://bispl.weebly.com/">Jong Chul Ye</a><sup>1</sup>,
             </span>
           </div>
           <div class="is-size-5 publication-authors">
@@ -133,15 +127,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -190,36 +175,38 @@
 
     <div class="columns is-centered">
 
-      <!-- Visual Effects. -->
+      <!-- Effectiveness of ZegOT. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <img src="./fig/figure1.jpg"
-          class="abstarct_image"
-          alt="figure1_image."/>
+          <h2 class="title is-3">Effectiveness of ZegOT</h2>
           <p>
             Harmonic mean IoU of various zero-shot semantic segmentation methods over the number of learnable parameters on
             PASCAL VOC dataset. Black dashed line indicates the fully supervised learning result of ours.
           </p>
+          <img src="./fig/figure1.jpg"
+          class="abstarct_image"
+          alt="figure1_image."/>
         </div>
       </div>
-      <!--/ Visual Effects. -->
+      <!--/ Effectiveness of ZegOT. -->
 
-      <!-- Matting. -->
+      <!-- Multi Prompt OT Solver (MPOT) -->
       <div class="column">
         <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2>
         <div class="columns is-centered">
           <div class="column content">
+            <p>
+               A schematic diagram of Multi Prompt Optimal Transport (MPOT) solvers including Shallow and Deep variants.
+            </p>            
             <img src="./fig/OT.jpg"
                  class="abstarct_image"
                  alt="figure1_image."/>
-            <p>
-                A schematic diagram of Multi Prompt Optimal Transport (MPOT) solvers including Shallow and Deep variants.
-            </p>
+
           </div>
 
         </div>
       </div>
+      <!-- Multi Prompt OT Solver (MPOT) -->
     </div>
   </div>
 </section>
@@ -232,28 +219,33 @@
         <!-- Visual Effects. -->
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">Visual Effects</h2>
+            <h2 class="title is-3"></h2>
+            <p>
+                Visualization of the learned text prompt and image pixel alignment. For each method, we present its segmentation result (left)
+                and N multiple text prompts-related score matrix activated by the predicted class (right). In the baseline method without OT, all the
+                Pi-related score matrices resemble each others. On the other hand, our ZegOT-Shallow and ZegOT-Deep show separate score matrices,
+                with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.
+            </p>            
             <img src="./fig/scoremap.jpg"
             class="abstarct_image"
             alt="figure1_image."/>
-            <p>
-              Harmonic mean IoU of various zero-shot semantic segmentation methods over the number of learnable parameters on
-              PASCAL VOC dataset. Black dashed line indicates the fully supervised learning result of ours.
-            </p>
           </div>
         </div>
         <!--/ Visual Effects. -->
   
         <!-- Matting. -->
         <div class="column">
-          <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2>
+          <h2 class="title is-3"></h2>
           <div class="columns is-centered">
             <div class="column content">
               <img src="./fig/seg_appen.jpg"
                    class="abstarct_image"
                    alt="figure1_image."/>
               <p>
-                  A schematic diagram of Multi Prompt Optimal Transport (MPOT) solvers including Shallow and Deep variants.
+                Qualitative zero-shot segmentation results on COCO-Stuff164K dataset. The yellow tag indicates seen classes, while the
+                green tag indicates unseen classes. Surprisingly, our ZegOT-Shallow and ZegOT-Deep effectively segment a tiny cat that does not even
+                belong to the ground truth (see red arrows in 2nd row), and properly segment the person class within the small-sized portraits (see red
+                arrows in 3rd row), while the previous SOTA method shows inferior performance on these features.
               </p>
             </div>
   
