@@ -230,8 +230,8 @@
                 <p>
                 Visualization of the learned text prompt and image pixel alignment. For each method, we present its segmentation result (left)
                 and N multiple text prompts-related score matrix activated by the predicted class (right). In the baseline method without OT, all the
-                Pi-related score matrices resemble each others. On the other hand, our ZegOT-Shallow and ZegOT-Deep show separate score matrices,
-                with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.
+                Pi-related score matrices resemble each others. On the other hand, <span style="background-color:#33CAFF;font-weight:bold;">our ZegOT-Shallow and ZegOT-Deep show separate score matrices,
+                with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.</span>
                 </p>            
                 <img src="./fig/scoremap.jpg"
                 class="score_map"
@@ -242,7 +242,10 @@
         <div class="column">
           <h2 class="title is-3"></h2>
           <div class="columns is-centered">
-            <div class="column content">         
+            <div class="column content">       
+              <p>
+                Visualization of the learned text prompt and image pixel alignment. The <span style="background-color:yellow;font-weight:bold;"> yellow </span> tag indicates seen classes, while <span style="background-color:green;font-weight:bold;"> the green </span>tag indicates unseen classes. For each method, we present its segmentation result (left) and N multiple text prompts-related score matrix activated by the predicted class (right). In the baseline method without OT, all the Pi-related score matrices resemble each others. On the other hand, our ZegOT-Shallow and ZegOT-Deep show separate score matrices, with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.
+              </p>     
                 <img src="./fig/scoremap_apen.jpg"
                 class="score_map"
                 alt="score_map_image."/>
@@ -257,8 +260,8 @@
                   <p>
                     Qualitative zero-shot segmentation results on COCO-Stuff164K dataset. The yellow tag indicates seen classes, while the
                     green tag indicates unseen classes. Surprisingly, our ZegOT-Shallow and ZegOT-Deep effectively segment a tiny cat that does not even
-                    belong to the ground truth (see red arrows in 2nd row), and properly segment the person class within the small-sized portraits (see red
-                    arrows in 3rd row), while the previous SOTA method shows inferior performance on these features.
+                    belong to the ground truth (see <span style="color:red;font-weight:bold;">red arrows in 2nd row</span>), and properly segment the person class within the small-sized portraits (<span style="color:red;font-weight:bold;">see red
+                    arrows in 3rd row</span>), while the previous SOTA method shows inferior performance on these features.
                   </p>            
                   <img src="./fig/seg_appen.jpg"
                   class="segment_results"
