@@ -196,32 +196,26 @@
             Harmonic mean IoU of various zero-shot semantic segmentation methods over the number of learnable parameters on
             PASCAL VOC dataset. Black dashed line indicates the fully supervised learning result of ours.
           </p>
-          <img src="./fig/figure1.jpg"
+          <img src="./fig/figure1.jpg" vspace = 20 
           class="figure1"
           alt="figure1_image."/>
         </div>
       </div>
       <!--/ Effectiveness of ZegOT. -->
-
       <!-- Multi Prompt OT Solver (MPOT) -->
       <div class="column">
-        <!-- <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2> -->
-        <!-- <div class="columns is-centered"> -->
-          <div class="content">
-            <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2>
+        <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2>
+        <div class="columns is-centered">
+          <div class="column content">
             <p>
                A schematic diagram of <span style="color:#33CAFF;font-weight:bold;">Multi Prompt Optimal Transport (MPOT) solvers</span> including Shallow and Deep variants.
             </p>            
-            <!-- <img src="./fig/OT.jpg"
-                 class="MPOT SOLVER"
-                 alt="mpot solver."/> -->
             <video id="teaser" autoplay muted loop playsinline height="100%">
               <source src="./fig/Ot_only_v3.mp4"
                       type="video/mp4">
             </video>
           </div>
-
-        <!-- </div> -->
+        </div>
       </div>
       <!-- Multi Prompt OT Solver (MPOT) -->
     </div>
@@ -246,28 +240,15 @@
                 alt="score_map_image."/>
             </div>
           </div>
-        </div>  
-        <div class="column">
-          <h2 class="title is-3"></h2>
-          <div class="columns is-centered">
-            <div class="column content">       
-              <p>
-                Visualization of the learned text prompt and image pixel alignment. The <span style="background-color:yellow;font-weight:bold;"> yellow </span> tag indicates seen classes, while the <span style="background-color:green;font-weight:bold;"> green </span>tag indicates unseen classes. For each method, we present its segmentation result (left) and N multiple text prompts-related score matrix activated by the predicted class (right). In the baseline method without OT, all the Pi-related score matrices resemble each others. On the other hand, our ZegOT-Shallow and ZegOT-Deep show separate score matrices, with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.
-              </p>     
-                <img src="./fig/scoremap_apen.jpg"
-                class="score_map"
-                alt="score_map_image."/>
-            </div>
-          </div>
-        </div>          
+        </div>        
         <!--/ Visual Effects. -->
         <div class="column">
             <h2 class="title is-3"></h2>
             <div class="columns is-centered">
               <div class="column content">
                   <p>
-                    Qualitative zero-shot segmentation results on COCO-Stuff164K dataset. The yellow tag indicates seen classes, while the
-                    green tag indicates unseen classes. Surprisingly, our ZegOT-Shallow and ZegOT-Deep effectively segment a tiny cat that does not even
+                    Qualitative zero-shot segmentation results on COCO-Stuff164K dataset. The <span style="background-color:yellow;font-weight:bold;">yellow</span> tag indicates seen classes, while the
+                    <span style="background-color:#33FF39;font-weight:bold;">green </span> tag indicates unseen classes. Surprisingly, our ZegOT-Shallow and ZegOT-Deep effectively segment a tiny cat that does not even
                     belong to the ground truth (see <span style="color:red;font-weight:bold;">red arrows in 2nd row</span>), and properly segment the person class within the small-sized portraits (<span style="color:red;font-weight:bold;">see red
                     arrows in 3rd row</span>), while the previous SOTA method shows inferior performance on these features.
                   </p>            
@@ -279,7 +260,26 @@
         </div> 
     </div>       
 </section>
-
+<section class="section">
+  <div class="container is-max-desktop">
+      <h2 class="title is-3"> Result of ZegOT on Real-World Data</h2>
+      <!-- Visual Effects. -->
+      <div class="column">
+        <h2 class="title is-3"></h2>
+        <div class="columns is-centered">
+          <div class="column content">
+              <p>
+              Qualitative zero-shot segmentation results on real-world data. The <span style="background-color:yellow;font-weight:bold;">yellow </span>tag indicates seen classes, whille the  <span style="background-color:#33FF39;font-weight:bold;">green</span> tag indicates unseen classes.
+              We demonstarte that our ZegOT-Deep can suceessfully be applied to real-world dataset, which are not available during training.  
+              </p>            
+              <img src="./fig/real_thor.jpg"
+              class="score_map"
+              alt="score_map_image."/>
+          </div>
+        </div>
+      </div>        
+  </div>       
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
