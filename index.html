@@ -215,11 +215,11 @@
       <!-- Effectiveness of ZegOT. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Effectiveness of ZegOT</h2>
+          <h2 class="title is-3">Analysis of the learned text prompts</h2>
           <p>
             Visualization of text prompts-related image pixel alignment. Without proposed MPOT, all the multiple prompts on each class ${P}^i$ are cohered and their related score maps resemble each others. On the other hand, with our MPOT, each P is diversely projected and each P-related score map focuses on different semantic attributes.
           </p>
-          <img src="./fig/score.png" vspace = 20 
+          <img src="./fig/mpot_analysis.jpg" vspace = 20 
           class="figure1"
           alt="figure1_image."/>
         </div>
@@ -258,7 +258,7 @@
                 Pi-related score matrices resemble each others. On the other hand, <span style="color:#33CAFF;font-weight:bold;">our ZegOT-Shallow and ZegOT-Deep show separate score matrices,
                 with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.</span>
                 </p>            
-                <img src="./fig/scoremap.jpg"
+                <img src="./fig/context.jpg"
                 class="score_map"
                 alt="score_map_image."/>
             </div>
@@ -275,7 +275,7 @@
                     belong to the ground truth (see <span style="color:red;font-weight:bold;">red arrows in 2nd row</span>), and properly segment the person class within the small-sized portraits (<span style="color:red;font-weight:bold;">see red
                     arrows in 3rd row</span>), while the previous SOTA method shows inferior performance on these features.
                   </p>            
-                  <img src="./fig/seg_appen.jpg"
+                  <img src="./fig/coco.jpg"
                   class="segment_results"
                   alt="segment_reults_image."/>
               </div>
