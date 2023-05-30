@@ -172,12 +172,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent success of large-scale Contrastive Language-Image Pre-training (CLIP) has led to great promise in zero-shot semantic segmentation by transferring image-text aligned knowledge
-            to pixel-level classification. However, existing methods usually require an additional image encoder or retraining/tuning the CLIP module. Here, we present a cost-effective strategy using
-            text-prompt learning that keeps the entire CLIP module frozen while fully leveraging its rich information. Specifically, we propose a novel <span style="color:#33CAFF;font-weight:bold;"> Zero-shot segmentation with Optimal Transport
-            (ZegOT) method </span> that matches multiple text prompts with frozen image embeddings through optimal transport, which allows each text prompt to efficiently focus on specific semantic attributes.
-            Additionally, we propose <span style="color:#33CAFF;font-weight:bold;">Deep Local Feature Alignment (DLFA)</span> that deeply aligns the text prompts with intermediate local feature of the frozen image encoder layers, which significantly boosts the zero-shot segmentation performance. Through extensive experiments on benchmark
-            datasets, we show that <span style="color:#33CAFF;font-weight:bold;"> our method achieves the state-of-the-art (SOTA) performance with only X7 lighter parameters compared to previous SOTA approaches.</span>
+            Recent success of large-scale Contrastive Language-Image Pre-training (CLIP) has led to great promise in zero-shot semantic segmentation by transferring image-text aligned knowledge to  pixel-level classification. 
+            However, existing methods usually require an additional image encoder or retraining/tuning the CLIP module. Here,  we propose a novel we propose a novel <span style="color:#33CAFF;font-weight:bold;"> Zero-shot segmentation with Optimal Transport
+            (ZegOT) method </span>method that matches multiple text prompts with frozen image embeddings through optimal transport. In particular, we introduce a novel  Multiple Prompt Optimal Transport Solver (MPOT), which is designed to learn an optimal mapping between multiple text prompts and visual feature maps of the frozen image encoder hidden layers. This unique mapping method facilitates each of the multiple text prompts to effectively focus on distinct visual semantic attributes.
+            Through extensive experiments on benchmark datasets, we show that our method achieves the state-of-the-art (SOTA) performance over existing Zero-shot Semantic Segmentation (ZS3) approaches
           </p>
         </div>
       </div>
@@ -196,8 +194,7 @@
         <div class="content">
           <h2 class="title is-3">Effectiveness of ZegOT</h2>
           <p>
-            Harmonic mean IoU of various zero-shot semantic segmentation methods over the number of learnable parameters on
-            PASCAL VOC dataset. Black dashed line indicates the fully supervised learning result of ours.
+            Visualization of text prompts-related image pixel alignment. Without proposed MPOT, {all the multiple prompts on each class ${P}^i$ are cohered} and their related score maps resemble each others. On the other hand, with our MPOT, each P is diversely projected and each P-related score map focuses on different semantic attributes.
           </p>
           <img src="./fig/figure1.jpg" vspace = 20 
           class="figure1"
