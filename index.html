@@ -175,7 +175,7 @@
             Recent success of large-scale Contrastive Language-Image Pre-training (CLIP) has led to great promise in zero-shot semantic segmentation by transferring image-text aligned knowledge to  pixel-level classification. 
             However, existing methods usually require an additional image encoder or retraining/tuning the CLIP module. Here,  we propose a novel we propose a novel <span style="color:#33CAFF;font-weight:bold;"> Zero-shot segmentation with Optimal Transport
             (ZegOT) </span>method that matches multiple text prompts with frozen image embeddings through optimal transport. In particular, we introduce a novel  Multiple Prompt Optimal Transport Solver (MPOT), which is designed to learn an optimal mapping between multiple text prompts and visual feature maps of the frozen image encoder hidden layers. This unique mapping method facilitates each of the multiple text prompts to effectively focus on distinct visual semantic attributes.
-            Through extensive experiments on benchmark datasets, we show that our method achieves the state-of-the-art (SOTA) performance over existing Zero-shot Semantic Segmentation (ZS3) approaches
+            Through extensive experiments on benchmark datasets, we show that our method achieves the state-of-the-art (SOTA) performance over existing Zero-shot Semantic Segmentation (ZS3) approaches.
           </p>
         </div>
       </div>
@@ -194,9 +194,9 @@
         <div class="content">
           <h2 class="title is-3">Effectiveness of ZegOT</h2>
           <p>
-            Visualization of text prompts-related image pixel alignment. Without proposed MPOT, all the multiple prompts on each class ${P}^i$ are cohered and their related score maps resemble each others. On the other hand, with our MPOT, each P is diversely projected and each P-related score map focuses on different semantic attributes.
+            Visualization of text prompts-related image pixel alignment. Without proposed MPOT, all the multiple prompts on each class P are cohered and their related score maps resemble each others. On the other hand, <span style="color:#33CAFF;font-weight:bold;">with our MPOT</span>, each P is diversely projected and each P-related score map <span style="color:#33CAFF;font-weight:bold;">focuses on different semantic attributes.</span>
           </p>
-          <img src="./fig/score.png" vspace = 20 
+          <img src="./fig/score.png" vspace = 10 
           class="figure1"
           alt="figure1_image."/>
         </div>
@@ -212,37 +212,37 @@
 
     <div class="columns is-centered">
 
-      <!-- Effectiveness of ZegOT. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Analysis of the learned text prompts</h2>
-          <p>
-            In the baseline method without MPOT, the learned text prompts P show tightly grouped distribution within their respective class clusters (indicated as different colors in the left image, respectively). 
-            The result suggests that the learned text prompts lack the ability to attend on different semantic context but converge to represent similar semantic context. In contrast, our ZegOT with MPOT produces dispersed distributions, 
-            with even cohesion within corresponding prompt clusters (indicated as gray circles in the right image in Figure, respectively). 
-          </p>
-          <img src="./fig/mpot_analysis.jpg" vspace = 20 
-          class="figure1"
-          alt="figure1_image."/>
-        </div>
-      </div>
-      <!--/ Effectiveness of ZegOT. -->
       <!-- Multi Prompt OT Solver (MPOT) -->
       <div class="column">
         <h2 class="title is-3">Multi Prompt OT Solver (MPOT)</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-               A schematic diagram of <span style="color:#33CAFF;font-weight:bold;">Multi Prompt Optimal Transport (MPOT) solvers</span> The pixel-text score matrix given each image encoder layer is refined through the optimal transport plan.
+               A schematic diagram of <span style="color:#33CAFF;font-weight:bold;">Multi Prompt Optimal Transport (MPOT) solvers. </span> The pixel-text score matrix given each image encoder layer is refined through the optimal transport plan.
             </p>            
             <video id="teaser" autoplay muted loop playsinline height="100%">
-              <source src="./fig/Ot_only_v3.mp4"
+              <source src="./fig/mpot_video.mp4"
                       type="video/mp4">
             </video>
           </div>
         </div>
       </div>
       <!-- Multi Prompt OT Solver (MPOT) -->
+      <!-- Effectiveness of ZegOT. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Analysis of MPOT</h2>
+          <p>
+            In the baseline method without MPOT, the learned text prompts P show tightly grouped distribution within their respective class clusters (indicated as different colors in the left image, respectively). 
+            In contrast, <span style="color:#33CAFF;font-weight:bold;">our ZegOT with MPOT</span> produces dispersed distributions, 
+            with even cohesion within corresponding prompt clusters (indicated as gray circles in the right image in Figure, respectively). 
+          </p>
+          <img src="./fig/mpot_analysis.jpg" vspace = 10 
+          class="figure1"
+          alt="figure1_image."/>
+        </div>
+      </div>
+      <!--/ Effectiveness of ZegOT. -->      
     </div>
   </div>
 </section>
@@ -251,14 +251,12 @@
         <h2 class="title is-3">Qualitative Result of ZegOT</h2>
         <!-- Visual Effects. -->
         <div class="column">
-          <h2 class="title is-3"></h2>
+          <h2 class="title is-3">PASCAL Context</h2>
           <div class="columns is-centered">
             <div class="column content">
                 <p>
-                Visualization of the learned text prompt and image pixel alignment. For each method, we present its segmentation result (left)
-                and N multiple text prompts-related score matrix activated by the predicted class (right). In the baseline method without OT, all the
-                Pi-related score matrices resemble each others. On the other hand, <span style="color:#33CAFF;font-weight:bold;">our ZegOT-Shallow and ZegOT-Deep show separate score matrices,
-                with ZegOT-Deep more focusing on different semantic attributes of the predicted class object.</span>
+                  Qualitative zero-shot segmentation results on PASCAL Context dataset. The <span style="background-color:yellow;font-weight:bold;">yellow</span> tag indicates seen classes, while the
+                  <span style="background-color:#33FF39;font-weight:bold;">green </span> tag indicates unseen classes. Our ZegOT segmentes semantic objectex most accurately of unseen objects compare to previous SOTA methods. 
                 </p>            
                 <img src="./fig/context.jpg"
                 class="score_map"
@@ -268,14 +266,13 @@
         </div>        
         <!--/ Visual Effects. -->
         <div class="column">
-            <h2 class="title is-3"></h2>
+            <h2 class="title is-3">COCO-Stuff164K</h2>
             <div class="columns is-centered">
               <div class="column content">
                   <p>
                     Qualitative zero-shot segmentation results on COCO-Stuff164K dataset. The <span style="background-color:yellow;font-weight:bold;">yellow</span> tag indicates seen classes, while the
-                    <span style="background-color:#33FF39;font-weight:bold;">green </span> tag indicates unseen classes. Surprisingly, our ZegOT-Shallow and ZegOT-Deep effectively segment a tiny cat that does not even
-                    belong to the ground truth (see <span style="color:red;font-weight:bold;">red arrows in 2nd row</span>), and properly segment the person class within the small-sized portraits (<span style="color:red;font-weight:bold;">see red
-                    arrows in 3rd row</span>), while the previous SOTA method shows inferior performance on these features.
+                    <span style="background-color:#33FF39;font-weight:bold;">green </span> tag indicates unseen classes. Surprisingly, our ZegOT demonstrates superior performance in accurately categorizing classes 
+                    and precisely sectioning boundaries of unseen objects, unlike previous SOTA methods which tend to misclassify the category (see <span style="color:red;font-weight:bold;"> red arrows </span>.)
                   </p>            
                   <img src="./fig/coco.jpg"
                   class="segment_results"
@@ -295,7 +292,7 @@
           <div class="column content">
               <p>
               Qualitative zero-shot segmentation results on real-world data. The <span style="background-color:yellow;font-weight:bold;">yellow </span>tag indicates seen classes, whille the  <span style="background-color:#33FF39;font-weight:bold;">green</span> tag indicates unseen classes.
-              We demonstarte that our ZegOT-Deep can be suceessfully applied to real-world dataset, which are not available during training.  
+              We demonstarte that our ZegOT can be suceessfully applied to real-world dataset, which are not available during training.  
               </p>            
               <img src="./fig/real_thor.jpg"
               class="score_map"
